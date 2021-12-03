@@ -10,8 +10,8 @@ var tabelaDePreco = {
     "mandioca":2,
     "vinagrete":47.60,
     "suco":0.99,
-    "refigerante":8,
-    "cerveja":30,
+    "refrigerante":8,
+    "cerveja":14,
 }
 
 var qtPorPessoa = {
@@ -23,9 +23,9 @@ var qtPorPessoa = {
     "mandioca":100,
     "vinagrete":150,
 
-    "suco":1000,
-    "refigerante":500,
-    "cerveja":5000,
+    "suco":200,
+    "refrigerante":500,
+    "cerveja":2000,
 }
 
 
@@ -50,9 +50,9 @@ function calcular(dados){
         "linguica":`${ dados.linguica? totalCarne/count: 0}`,
         "coxaAsa":`${ dados.coxaAsa? totalCarne/count: 0}`,
         
-        "cerveja":`${dados.cerveja? (dados.adultos * qtPorPessoa.cerveja) / 1000:0}`,
-        "suco":`${dados.suco? ((dados.criancas * qtPorPessoa.suco/2) + (dados.adultos * qtPorPessoa.suco)) / 1000:0}`,
-        "refrigerante":`${dados.suco? ((dados.criancas * qtPorPessoa.suco/2) + (dados.adultos * qtPorPessoa.suco)) / 1000:0}`,
+        "cerveja":`${dados.cerveja? (dados.adultos * qtPorPessoa.cerveja):0}`,
+        "suco":`${dados.suco? ((dados.criancas * qtPorPessoa.suco/2) + (dados.adultos * qtPorPessoa.suco)):0}`,
+        "refrigerante":`${dados.refrigerante? ((dados.criancas * qtPorPessoa.refrigerante/2) + (dados.adultos * qtPorPessoa.refrigerante)):0}`,
 
         
         "farofa":`${dados.farofa?((dados.criancas * qtPorPessoa.farofa/2) + (dados.adultos * qtPorPessoa.farofa))/ 1000:0}`,
@@ -144,17 +144,17 @@ function render(dados){
         else if (ob == 'suco') {
             let valor = (dados[ob]/1000)*tabelaDePreco.suco
             total += valor
-            dados[ob] != 0? html += elementList('Suco',valor ,`${dados[ob]/1000}l`):null;
+            dados[ob] != 0? html += elementList('Suco',valor ,`${dados[ob]/1000}L`):null;
         }
-        else if (ob == 'refigerante') {
-            let valor = (dados[ob]/1000)*tabelaDePreco.refigerante 
+        else if (ob == 'refrigerante') {
+            let valor = (dados[ob]/1000)*tabelaDePreco.refrigerante 
             total += valor
-            dados[ob] != 0? html += elementList('Refigerante',valor ,`${dados[ob]/1000}l`):null;
+            dados[ob] != 0? html += elementList('Refrigerante',valor ,`${dados[ob]/1000}L`):null;
         }
         else if (ob == 'cerveja') {
-            let valor = (dados[ob]/1000)*tabelaDePreco.cerveja
+            let valor = (dados[ob]/1000)*tabelaDePreco.cerveja/2
             total += valor
-            dados[ob] != 0? html += elementList('Cerveja',valor ,`${dados[ob]/1000}l`):null;
+            dados[ob] != 0? html += elementList('Cerveja',valor ,`${dados[ob]/1000}L`):null;
         }
     }
     html += elementList('Total',total);

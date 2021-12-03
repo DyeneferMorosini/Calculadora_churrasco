@@ -1,10 +1,4 @@
 
-
-
-
-/*//////////////////////////////////////////////////////////////////
-[ FONT ]*/
-
 @font-face {
   font-family: Poppins-Regular;
   src: url('../fonts/poppins/Poppins-Regular.ttf'); 
@@ -25,21 +19,16 @@
   src: url('../fonts/montserrat/Montserrat-SemiBold.ttf'); 
 }
 
-/*//////////////////////////////////////////////////////////////////
-[ RESTYLE TAG ]*/
 
 * {
 	margin: 0px; 
 	padding: 0px; 
 	box-sizing: border-box;
 }
-
 body, html {
 	height: 100%;
 	font-family: Poppins-Regular, sans-serif;
 }
-
-/*---------------------------------------------*/
 a {
 	font-family: Poppins-Regular;
 	font-size: 14px;
@@ -55,14 +44,6 @@ a {
 a:focus {
 	outline: none !important;
 }
-
-a:hover {
-	text-decoration: none;
-  color: #fc00ff;
-  border-color: #fc00ff;
-}
-
-/*---------------------------------------------*/
 h1,h2,h3,h4,h5,h6 {
 	margin: 0px;
 }
@@ -75,14 +56,14 @@ p {
 	margin: 0px;
     width: 400px;
 }
-
+strong{
+  font-size: 24px;
+}
 ul, li {
 	margin: 0px;
 	list-style-type: none;
 }
 
-
-/*---------------------------------------------*/
 input {
 	outline: none;
 	border: none;
@@ -122,8 +103,6 @@ label {
   display: block;
   margin: 0;
 }
-
-/*---------------------------------------------*/
 button {
 	outline: none !important;
 	border: none;
@@ -137,35 +116,32 @@ button:hover {
 iframe {
 	border: none !important;
 }
-
-
-/*//////////////////////////////////////////////////////////////////
-[ Utility ]*/
+.text-muted{
+  font-size: 18px;
+}
+.my-0{
+  font-size: 20px;
+}
 .txt1 {
   font-family: Montserrat-SemiBold;
   font-size: 20px;
   color: #555555;
   line-height: 1.5;
 }
-
 .bo1 {border-bottom: 1px solid #999999;}
-
-/*//////////////////////////////////////////////////////////////////
-[ login ]*/
-
 .limiter {
   width: 100%;
   margin: 0 auto;
 }
-/* MENU BAR ----------------------------*/
 .navbar{
   align-items: center;
 }
 .nav-item{
   margin-left: 20px;
 }
-
-/* MENU BAR ----------------------------*/
+.nav-link{
+  font-size: 20px;
+}
 .containerbox {
   width: 100%;  
   min-height: 100vh;
@@ -178,13 +154,10 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;;
 }
-
-
 .wrapbox {
   width: auto;
   max-width: 60%;
@@ -193,11 +166,6 @@ iframe {
   position: relative;
   
 }
-
-
-/*==================================================================
-[ Form ]*/
-
 .form {
   width: 100%;
 }
@@ -213,8 +181,6 @@ iframe {
   margin-bottom: -40px;
 }
 
-
-
 .wrap-input100 {
   width: 100%;
   position: relative;
@@ -223,8 +189,6 @@ iframe {
   border-radius: 10px;
 }
 
-
-/*---------------------------------------------*/
 .input100 {
   font-family: Poppins-Regular;
   color: #333333;
@@ -237,8 +201,6 @@ iframe {
   height: 60px;
   padding: 0 20px;
 }
-/*------------------------------------------------------------------
-[ Focus Input ]*/
 
 .focus-input100 {
   position: absolute;
@@ -248,7 +210,7 @@ iframe {
   top: -1px;
   left: -1px;
   pointer-events: none;
-  border: 1px solid #fc00ff;
+  border: 1px solid #e9003a;
   border-radius: 10px;
 
   visibility: hidden;
@@ -288,9 +250,6 @@ iframe {
   transform: scale(1);
 }
 
-
-/*------------------------------------------------------------------
-[ Button ]*/
 .containerbox-form-btn {
   width: 100%;
   display: -webkit-box;
@@ -346,24 +305,19 @@ iframe {
   -moz-transition: all 0.4s;
   transition: all 0.4s;
 }
-
 .form-btn:hover:before {
   opacity: 1;
 }
-
 .container{
   text-align: center;
 }
 .jumbotron{
-  height: 400px;
   font-size: 20px;
 }
 h1.display{
   margin-top: -30px;
-  font-size: 50px;
 }
 .animated {
-  background-image: url(/css/images/logo.png);
   background-repeat: no-repeat;
   background-position: left top;
   padding-top:95px;
@@ -373,7 +327,6 @@ h1.display{
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
-
 @-webkit-keyframes fadeInDown {
   0% {
      opacity: 0;
@@ -395,7 +348,6 @@ h1.display{
      transform: translateY(0);
   }
 }
-
 .fadeInDown {
   -webkit-animation-name: fadeInDown;
   animation-name: fadeInDown;
@@ -403,17 +355,13 @@ h1.display{
 .display-6{
   margin-top: 50px;
 }
-.contact{
-  height: 100px;
-}
 .card{
   align-items: center;
   border-color: transparent;
   margin-bottom: 40px;
   margin-top: -50px;
 }
-/*//////////////////////////////////////////////////////////////////
-[ Responsive ]*/
+
 @media (max-width: 768px) {
   .wrapbox {
     padding-left: 60px;
@@ -427,17 +375,8 @@ h1.display{
   }
 }
 }
-
-
-/*.validate-form{
-  display:none;
-}*/
-
 .result{
   display:block;
 }
-.container {
-    max-width: 960px;
-  }
   
 .lh-condensed { line-height: 1.25; }
