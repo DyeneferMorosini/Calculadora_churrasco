@@ -51,79 +51,101 @@
 	<div class="limiter">
 		<div class="containerbox" style="background-image: url('images/churrasco.jpg');">
 			<div class="wrapbox p-l-110 p-r-110 p-t-62 p-b-33">
-				<form class="result flex-sb flex-w">
-					<span class="form-title p-b-53">
-						Resultado
-					</span>
-				</form>
-				<form class="form validate-form flex-sb flex-w">
+
+                    <form class="form validate-form flex-sb flex-w" onsubmit="return false" id="form_churrasco">
 					
-					<span class="form-title p-b-53">
-						Calculadora do Churras
-					</span>
-					
-					<div class="p-t-31 p-b-9">
-						<span class="txt1">
-							Quantos adultos?
-						</span>
-					</div>
-					<div class="wrap-input100 validate-input">
-						<input class="input100" type="text" name="username" >
-						<span class="focus-input100"></span>
-					</div>
-					
-					<div class="p-t-31 p-b-9">
-						<span class="txt1">
-							Quantas crianças?
-						</span>
-					</div>
-					<div class="wrap-input100 validate-input">
-						<input class="input100" type="text" name="username" >
-						<span class="focus-input100"></span>
-					</div>
-					<div class="p-t-13 p-b-9">
-						<span class="txt1">
-							Quais carnes serão servidas?
-						</span>
-						<p><input type="checkbox" id="item1" class="item">Picanha</p>
-						<p><input type="checkbox" id="item2" class="item">Costela</p>
-						<p><input type="checkbox" id="item3" class="item">Coxinha da asa</p>
-						<p><input type="checkbox" id="item4" class="item">Linguiça</p>
-						<p><input type="checkbox" id="item5" class="item">Carne bovina</p>
-						
-					</div>
-					<div class="p-t-13 p-b-9">
-						<span class="txt1">
-							Quais serão os acompanhamentos?
-						</span>
-						<p><input type="checkbox" id="item6" class="item">Pão de alho</p>
-						<p><input type="checkbox" id="item7" class="item">Farofa</p>
-						<p><input type="checkbox" id="item8" class="item">Mandioca</p>
-						<p><input type="checkbox" id="item9" class="item">Vinagrete</p>
-						
-					</div>
-					<div class="p-t-13 p-b-9">
-						<span class="txt1">
-							Quais serão as bebidas?
-						</span>
-						<p><input type="checkbox" id="item10" class="item">Água</p>
-						<p><input type="checkbox" id="item11" class="item">Suco</p>
-						<p><input type="checkbox" id="item12" class="item">Refrigerante</p>
-						<p><input type="checkbox" id="item13" class="item">Cerveja</p>
-						
-					</div>
-					<div class="containerbox-form-btn m-t-17">
-						<button class="form-btn">
-							Calcular
-						</button>
-					</div>
-					</div>
-					
-				</form>
-				
+                        <span class="form-title p-b-53">
+                            Calculadora do Churras
+                        </span>
+                        <div class="row">
+                            <div class="col">
+                                <div class="p-t-31 p-b-9">
+                                    <span class="txt1">
+                                        Quantos adultos?
+                                    </span>
+                                </div>
+                                <div class="wrap-input100 validate-input">
+                                    <input class="input100" type="number" name="adultos" >
+                                    <span class="focus-input100"></span>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="p-t-31 p-b-9">
+                                    <span class="txt1">
+                                        Quantas crianças?
+                                    </span>
+                                </div>
+                                <div class="wrap-input100 validate-input">
+                                    <input class="input100" type="number" name="criancas" >
+                                    <span class="focus-input100"></span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col">
+                                <div class="p-t-13 p-b-9">
+                                    <span class="txt1">
+                                        Quais carnes serão servidas?
+                                    </span>
+                                    <p><input type="checkbox" name="alcatra" class="alcatra">Alcatra</p>
+                                    <p><input type="checkbox" name="costela" class="costela">Costela</p>
+                                    <p><input type="checkbox" name="picanha" class="picanha">Picanha</p>
+                                    <p><input type="checkbox" name="linguica" class="linguica">Linguiça</p>
+                                    <p><input type="checkbox" name="coxaAsa" class="coxaAsa">Coxinha da asa</p>
+                                    
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="p-t-13 p-b-9">
+                                    <span class="txt1">
+                                        Quais serão os acompanhamentos?
+                                    </span>
+                                    <p><input type="checkbox" name="farofa" class="item">Farofa</p>
+                                    <p><input type="checkbox" name="mandioca" class="item">Mandioca</p>
+                                    <p><input type="checkbox" name="vinagrete" class="item">Vinagrete</p>
+                                    <p><input type="checkbox" name="paoAlho" class="item">Pão de alho</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col">
+                                <div class="p-t-13 p-b-9">
+                                    <span class="txt1">
+                                        Quais serão as bebidas?
+                                    </span>
+                                    <p><input type="checkbox" name="suco" class="item">Suco</p>
+                                    <p><input type="checkbox" name="cerveja" class="item">Cerveja</p>
+                                    <p><input type="checkbox" name="refrigerante" class="item">Refrigerante</p>
+                                    
+                                </div>
+                            </div>
+                            <div class="col" style="width: 430px; display: flex; align-items: flex-end;">
+                                <div class="containerbox-form-btn m-t-17">
+                                    <button class="form-btn" id="calcular">
+                                        Calcular
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <hr>
+                    <div>
+                        <span class="form-title p-b-53">
+                            Resultado
+                        </span>
+                        <ul class="list-group mb-3" id="list_result">
+                        
+                            
+                        </ul>
+                    </div>
 			</div>
 		</div>
 	</div>
+
 	<div  class="jumbotron jumbotron-fluid" id="sobre">
 		<div class = "animated fadeInDown" class="container">
 		  <center>
@@ -160,10 +182,10 @@
 			  </div>
 			</div>
 		  </div>
-				</form>
-			  </div>
-		  </div>
+	
 		</div>
 	  </div>
 </body>
+<script src="./vendor/jquery/jquery-3.2.1.min.js"></script>
+<script src="./js/main.js"></script>
 </html>

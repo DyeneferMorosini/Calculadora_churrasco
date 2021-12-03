@@ -73,7 +73,7 @@ p {
 	line-height: 1.7;
 	color: #666666;
 	margin: 0px;
-  width: 800px;
+    width: 400px;
 }
 
 ul, li {
@@ -86,6 +86,7 @@ ul, li {
 input {
 	outline: none;
 	border: none;
+    margin-right: 3px;
 }
 
 textarea {
@@ -185,7 +186,8 @@ iframe {
 
 
 .wrapbox {
-  width: 680px;
+  width: auto;
+  max-width: 60%;
   background: #fff;
   border-radius: 10px;
   position: relative;
@@ -432,5 +434,10 @@ h1.display{
 }*/
 
 .result{
-  display:none;
+  display:block;
 }
+.container {
+    max-width: 960px;
+  }
+  
+.lh-condensed { line-height: 1.25; }
