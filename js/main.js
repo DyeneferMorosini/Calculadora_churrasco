@@ -85,7 +85,7 @@ function elementList(nome,valor,desc = 'total'){
         <li class="list-group-item d-flex justify-content-between lh-condensed">
             <div>
                 <h6 class="my-0">${nome}</h6>
-                <small class="text-muted">${desc}Kg</small>
+                <small class="text-muted">${desc}</small>
             </div>
             <span class="text-muted">R$ ${valor.toFixed(2)}</span>
         </li>
@@ -99,61 +99,61 @@ function render(dados){
         if (ob == 'picanha') {
             let valor = (dados[ob]/1000)*tabelaDePreco.picanha
             total += valor
-            dados[ob] != 0? html += elementList('Picanha', valor,dados[ob]/1000):null;
+            dados[ob] != 0? html += elementList('Picanha', valor,`${dados[ob]/1000}Kg`):null;
         }
         else if (ob == 'alcatra') {
             let valor = (dados[ob]/1000)*tabelaDePreco.alcatra
             total += valor
-            dados[ob] != 0? html += elementList('Alcatra',valor ,dados[ob]/1000):null;
+            dados[ob] != 0? html += elementList('Alcatra',valor ,`${dados[ob]/1000}Kg`):null;
         }
         else if (ob == 'costela') {
             valro = (dados[ob]/1000)*tabelaDePreco.costela
-            dados[ob] != 0? html += elementList('Costela',valro ,dados[ob]/1000):null;
+            dados[ob] != 0? html += elementList('Costela',valro ,`${dados[ob]/1000}Kg`):null;
         }
         else if (ob == 'linguica') {
             let valor = (dados[ob]/1000)*tabelaDePreco.linguica
             total += valor
-            dados[ob] != 0? html += elementList('Linguica',valor ,dados[ob]/1000):null;
+            dados[ob] != 0? html += elementList('Linguica',valor ,`${dados[ob]/1000}Kg`):null;
         }
         else if (ob == 'coxaAsa') {
             let valor = (dados[ob]/1000)*tabelaDePreco.coxaAsa
             total += valor
-            dados[ob] != 0? html += elementList('Coxinha da asa',valor ,dados[ob]/1000):null;
+            dados[ob] != 0? html += elementList('Coxinha da asa',valor ,`${dados[ob]/1000}Kg`):null;
         }
         else if (ob == 'paoAlho') {
             let valor = (dados[ob])*tabelaDePreco.paoAlho
             total += valor
-            dados[ob] != 0? html += elementList('Pão de Alho',valor ,dados[ob]):null;
+            dados[ob] != 0? html += elementList('Pão de Alho',valor ,`${dados[ob]}Kg`):null;
         }
         else if (ob == 'farofa') {
             let valor = (dados[ob])*tabelaDePreco.farofa
             total += valor
-            dados[ob] != 0? html += elementList('Farofa',valor ,dados[ob]):null;
+            dados[ob] != 0? html += elementList('Farofa',valor ,`${dados[ob]}Kg`):null;
         }
         else if (ob == 'mandioca') {
             let valor = (dados[ob])*tabelaDePreco.mandioca
             total += valor
-            dados[ob] != 0? html += elementList('Mandioca',valor ,dados[ob]):null;
+            dados[ob] != 0? html += elementList('Mandioca',valor ,`${dados[ob]}Kg`):null;
         }
         else if (ob == 'vinagrete') {
             let valor = (dados[ob])*tabelaDePreco.vinagrete
             total += valor
-            dados[ob] != 0? html += elementList('Vinagrete',valor ,dados[ob]):null;
+            dados[ob] != 0? html += elementList('Vinagrete',valor ,`${dados[ob]}Kg`):null;
         }
         else if (ob == 'suco') {
             let valor = (dados[ob]/1000)*tabelaDePreco.suco
             total += valor
-            dados[ob] != 0? html += elementList('Suco',valor ,dados[ob]/1000):null;
+            dados[ob] != 0? html += elementList('Suco',valor ,`${dados[ob]/1000}l`):null;
         }
         else if (ob == 'refigerante') {
             let valor = (dados[ob]/1000)*tabelaDePreco.refigerante 
             total += valor
-            dados[ob] != 0? html += elementList('Refigerante',valor ,dados[ob]/1000):null;
+            dados[ob] != 0? html += elementList('Refigerante',valor ,`${dados[ob]/1000}l`):null;
         }
         else if (ob == 'cerveja') {
             let valor = (dados[ob]/1000)*tabelaDePreco.cerveja
             total += valor
-            dados[ob] != 0? html += elementList('Cerveja',valor ,dados[ob]/1000):null;
+            dados[ob] != 0? html += elementList('Cerveja',valor ,`${dados[ob]/1000}l`):null;
         }
     }
     html += elementList('Total',total);
