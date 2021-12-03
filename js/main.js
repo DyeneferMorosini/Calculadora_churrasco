@@ -49,12 +49,12 @@ function calcular(dados){
         "costela":`${ dados.costela? totalCarne/count: 0}`,
         "linguica":`${ dados.linguica? totalCarne/count: 0}`,
         "coxaAsa":`${ dados.coxaAsa? totalCarne/count: 0}`,
-        "bebidas":{
-            "cerveja":`${dados.cerveja? (dados.adultos * qtPorPessoa.cerveja) / 1000:0}`,
-            "suco":`${dados.suco? ((dados.criancas * qtPorPessoa.suco/2) + (dados.adultos * qtPorPessoa.suco)) / 1000:0}`,
-            "refrigerante":`${dados.suco? ((dados.criancas * qtPorPessoa.suco/2) + (dados.adultos * qtPorPessoa.suco)) / 1000:0}`,
+        
+        "cerveja":`${dados.cerveja? (dados.adultos * qtPorPessoa.cerveja) / 1000:0}`,
+        "suco":`${dados.suco? ((dados.criancas * qtPorPessoa.suco/2) + (dados.adultos * qtPorPessoa.suco)) / 1000:0}`,
+        "refrigerante":`${dados.suco? ((dados.criancas * qtPorPessoa.suco/2) + (dados.adultos * qtPorPessoa.suco)) / 1000:0}`,
 
-        },
+        
         "farofa":`${dados.farofa?((dados.criancas * qtPorPessoa.farofa/2) + (dados.adultos * qtPorPessoa.farofa))/ 1000:0}`,
         "mandioca":`${dados.mandioca?((dados.criancas * qtPorPessoa.mandioca/2) + (dados.adultos * qtPorPessoa.mandioca))/ 1000:0}`,
         "vinagrete":`${dados.vinagrete?((dados.criancas * qtPorPessoa.vinagrete/2) + (dados.adultos * qtPorPessoa.vinagrete)) /1000:0}`,
